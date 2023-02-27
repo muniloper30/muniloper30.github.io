@@ -1,0 +1,40 @@
+@media only screen and (max-width:420px) {
+    .sec-about-me {
+        span {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .home-skills {
+               display: flex;
+               flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .sec-footer-cta {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+        .title-footer {
+           display: flex;
+           flex-direction: column;
+           width: 20rem;
+        }
+    .footer-cta {
+        display: flex;
+        flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        max-width: 390px;
+        max-height: 844px;
+    }
+}
+

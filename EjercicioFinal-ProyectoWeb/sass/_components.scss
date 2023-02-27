@@ -1,0 +1,123 @@
+
+@mixin btn-sm-modidy {
+  font-size: 1rem;
+  padding: 0.3rem 1.5rem;
+}
+
+@mixin btn-base {
+  padding: 0.25rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+$color-main: #a51919;
+
+.btn-main {
+  @include btn-base;
+  background-color: $color-main;
+  color: white;
+  border: 2px solid $color-main;
+
+  &:hover {
+    color: $color-main;
+    border: 2px solid $color-main;
+    background-color: white;
+  }
+
+  &-s {
+    @extend .btn-main;
+    @include btn-sm-modidy();
+  }
+}
+
+.btn-sec {
+  @include btn-base;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: $color-main;
+    border: none;
+  }
+
+  &-s {
+    @extend .btn-sec;
+    @include btn-sm-modidy();
+  }
+}
+
+.main-menu {
+  margin: 0 auto;
+    li {
+        list-style: none;
+        display: inline;
+        font-size: 1rem;
+        margin-right: 1rem;
+        
+
+        a {
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+    }
+}
+
+.icon-sm {
+    i {
+        font-size: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.562);
+        color: $color-main;
+        padding: 1.2rem;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #f7f7f7fb;
+        }
+    }
+
+.icon-big{
+  background-color: rgba(0, 0, 0, 0.562);
+  color: $color-main;
+  padding: 2rem 3rem;
+  font-size: 4rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #f7f7f7fb;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: $color-main;
+  }
+}
+
+
+.features {
+     
+    .icon {
+        color: $color-main;
+        font-size: 12rem;
+        text-align: center;
+    }
+    .description {
+        .title{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .text {
+            color: #888;
+            font-weight: 600;
+            text-align: center;
+            
+        }
+    }
+    .cta {
+        color: $color-main;
+        font-weight: 600;
+        margin-top: 3rem;
+        text-align: center;
+    }
+}
+
